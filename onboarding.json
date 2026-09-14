@@ -1,0 +1,19 @@
+{
+  "phase": "local",
+  "started": "2026-09-14",
+  "steps": {
+    "local": {
+      "plugins_installed": { "done": false, "label": "Install plugins (agent-dev, trinity)" },
+      "free_pool_confirmed": { "done": false, "label": "Confirm OmniRoute free-pool routing via aegis-infra /audit-omniroute (manager-routed if needed)" },
+      "trial_review_run": { "done": false, "label": "Run /trial-review and produce a real findings-or-clean report" }
+    },
+    "trinity": {
+      "onboarded": { "done": false, "label": "Deploy to Trinity (/trinity:onboard)" },
+      "first_remote_run": { "done": false, "label": "Run /review-fleet-outputs remotely via mcp__trinity__chat_with_agent" }
+    },
+    "schedules": {
+      "schedules_configured": { "done": false, "label": "Enable Fleet output review schedule after Hamid approves trial", "blocked_by": "trial_review_run + Hamid approval" },
+      "first_scheduled_run": { "done": false, "label": "Verify first scheduled execution completed" }
+    }
+  }
+}

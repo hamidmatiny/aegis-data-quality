@@ -1,0 +1,31 @@
+# Credentials - never commit
+.mcp.json
+.env
+*.pem
+*.key
+
+# Claude Code internals
+.claude.json
+.claude/projects/
+.claude/statsig/
+.claude/todos/
+.claude/debug/
+.claude/sessions/
+.claude/shell-snapshots/
+.claude/plugins/
+.claude/backups/
+.claude/settings.local.json
+.claude/settings.json
+.trinity/*
+!.trinity/pre-check
+!.trinity/post-check
+!.trinity/setup.sh
+credentials.json
+
+# Runtime
+content/
+session-files/
+node_modules/
+__pycache__/
+*.pyc
+.DS_Store

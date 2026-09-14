@@ -1,0 +1,48 @@
+title: "AEGIS Data/Quality"
+refresh: 300
+updated: "2026-09-14"
+
+sections:
+  - title: "Status"
+    layout: grid
+    columns: 3
+    widgets:
+      - type: status
+        label: "Agent Status"
+        value: "Scaffolded"
+        color: yellow
+      - type: metric
+        label: "Last Review"
+        value: "—"
+        description: "Updated by /update-dashboard"
+      - type: status
+        label: "Drift Flags"
+        value: "None"
+        color: green
+
+  - title: "Quality"
+    layout: grid
+    columns: 2
+    widgets:
+      - type: metric
+        label: "Reports Reviewed (last run)"
+        value: "—"
+      - type: metric
+        label: "Flags Raised (last run)"
+        value: "—"
+      - type: list
+        title: "Recent Reviews"
+        items: []
+        max_items: 5
+
+  - title: "Quick Links"
+    layout: list
+    widgets:
+      - type: link
+        label: "A2A routing table"
+        url: "https://github.com/hamidmatiny/aegis-infra/blob/main/docs/a2a-routing.md"
+        external: true
+      - type: link
+        label: "Trinity Dashboard"
+        url: "https://ability.ai"
+        external: true

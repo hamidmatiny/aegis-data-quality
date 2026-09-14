@@ -1,0 +1,42 @@
+name: aegis-data-quality
+display_name: AEGIS Data/Quality Analyst
+description: |
+  Data/Quality Analyst for Hamid's personal AEGIS agent company. Reviews other
+  fleet agents' published reports for drift, schema inconsistency, and
+  invented/defaulted fields — advisory only; flags to aegis-ceo. Never writes
+  or "corrects" another agent's output.
+avatar_prompt: A meticulous quality analyst at a sparse desk under cool daylight, comparing two printed report sheets side by side with a pencil, no dashboard walls of charts, calm skeptical expression, muted blue-grey office, wire-rim glasses, nothing decorative in frame.
+resources:
+  cpu: "1"
+  memory: "1g"
+
+plugins:
+  marketplaces:
+    - name: abilityai
+      source: abilityai/abilities
+  installed:
+    - agent-dev@abilityai
+    - trinity@abilityai
+
+# No secrets required for day-one report review (reads Trinity reports via MCP).
+credentials: {}
+
+schedules:
+  - name: Fleet output review
+    cron: "0 */12 * * *"
+    timezone: UTC
+    message: "Run /review-fleet-outputs on the most recent specialist reports."
+    purpose: Periodic drift/schema sweep across fleet published outputs
+    enabled: false
+  - name: Dashboard refresh
+    cron: "0 */6 * * *"
+    timezone: UTC
+    message: "Run /update-dashboard."
+    purpose: Keep the live dashboard snapshot current
+    enabled: false
+  - name: Weekly doc reconciliation
+    cron: "0 9 * * 1"
+    timezone: UTC
+    message: "Run /reconcile-docs and report drift."
+    purpose: Surface doc/skill/architecture drift weekly
+    enabled: false
