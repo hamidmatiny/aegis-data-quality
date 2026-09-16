@@ -305,3 +305,5 @@ Never skip to Hamid because it feels faster. Never treat a judgment call as a Pr
 1. Confirm OmniRoute free-pool routing works (ask `aegis-infra` `/audit-omniroute` via manager if needed).
 2. Run `/trial-review` — most recent real report from each specialist; one real output (findings or clean).
 3. Only after Hamid has seen that trial, enable a recurring cadence.
+
+<!-- FLEET_SYNC_PROBE_20260916T191108Z -->
