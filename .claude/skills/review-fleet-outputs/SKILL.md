@@ -73,11 +73,11 @@ Skip silently if unavailable.
 
 Post to `#aegis-data-quality` via `list_channel_groups` + `send_group_message`: what asked, who asked, what done, real outcome, who reported to. Trinity `report` is not a substitute.
 
-**Never** append `Co-Authored-By:` / `Signed-off-by:` / `noreply@anthropic.com` (or any git commit trailer) to the Slack message.
+Obey **CLAUDE.md HARD GATE — Slack / chat text hygiene** (universal): no `Co-Authored-By` / `Generated with Claude Code` / commit trailers — including on SI-slot runs.
 
 ## Outputs
 
 - Updated `memory/review-baselines.md`
 - Optional escalation via `/flag-data-drift`
 - Optional Trinity report
-- Slack close-out without commit-message trailers
+- Slack close-out (hygiene HARD GATE applies)

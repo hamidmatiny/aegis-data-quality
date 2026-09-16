@@ -37,6 +37,6 @@ Remind Hamid: enable schedules only after he has reviewed this trial output.
 
 ### Step 6: Slack completed-task close-out (mandatory)
 
-Post to `#aegis-data-quality` via `list_channel_groups` + `send_group_message`: what asked, who asked, what done, real outcome (findings or clean + report id), who reported to. Trinity `report` is not a substitute. See CLAUDE.md § Slack completed-task close-out.
+Post to `#aegis-data-quality` via `list_channel_groups` + `send_group_message`: what asked, who asked, what done, real outcome (findings or clean + report id), who reported to. Trinity `report` is not a substitute. See CLAUDE.md HARD GATE — Slack completed-task close-out.
 
-**Never** append `Co-Authored-By:` / `Signed-off-by:` / `noreply@anthropic.com` (or any git commit trailer) to the Slack message.
+Obey **CLAUDE.md HARD GATE — Slack / chat text hygiene** (universal): no `Co-Authored-By` / `Generated with Claude Code` / commit trailers — including on SI-slot runs.
