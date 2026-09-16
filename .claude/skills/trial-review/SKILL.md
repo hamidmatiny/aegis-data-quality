@@ -1,7 +1,7 @@
 ---
 name: trial-review
 description: One-time initial validation — confirm free-pool dependency awareness, review the most recent real report from each specialist, produce one real findings-or-clean report before cadence.
-allowed-tools: Read, Write, Bash, mcp__trinity__list_reports, mcp__trinity__get_report, mcp__trinity__list_agents, mcp__trinity__report, mcp__trinity__chat_with_agent
+allowed-tools: Read, Write, Bash, mcp__trinity__list_reports, mcp__trinity__get_report, mcp__trinity__list_agents, mcp__trinity__report, mcp__trinity__chat_with_agent, mcp__trinity__list_channel_groups, mcp__trinity__send_group_message
 user-invocable: true
 metadata:
   version: "1.0"
@@ -34,3 +34,9 @@ Produce one real result: findings (then `/flag-data-drift` if warranted) or hone
 ### Step 5: Onboarding
 
 Remind Hamid: enable schedules only after he has reviewed this trial output.
+
+### Step 6: Slack completed-task close-out (mandatory)
+
+Post to `#aegis-data-quality` via `list_channel_groups` + `send_group_message`: what asked, who asked, what done, real outcome (findings or clean + report id), who reported to. Trinity `report` is not a substitute. See CLAUDE.md § Slack completed-task close-out.
+
+**Never** append `Co-Authored-By:` / `Signed-off-by:` / `noreply@anthropic.com` (or any git commit trailer) to the Slack message.

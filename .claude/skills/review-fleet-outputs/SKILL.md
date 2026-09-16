@@ -38,6 +38,8 @@ Before treating a mismatch as real:
 1. Confirm the cited source actually returns / contains that field.
 2. If the field is absent, flag **fabricated/defaulted comparison** (or missing schema), not a numeric delta.
 
+**MRR / paying subscribers specifically:** Live numbers live only on `mrr_snapshot` (from `/bev/summary` and, after the SSOT fix, also `/bev/trajectory`). Never treat CEO `report.result` narrative text (e.g. "MRR: $29") as an endpoint field — that is narrative-only and caused false $29 vs $0 escalations. If a report compares narrative text to `mrr_snapshot`, flag **fabricated comparison**, not an MRR integrity bug.
+
 This is the class of bug this role exists to catch.
 
 ### Step 3: Checks
@@ -67,8 +69,15 @@ If `mcp__trinity__report` available:
 
 Skip silently if unavailable.
 
+### Step 7: Slack completed-task close-out (mandatory)
+
+Post to `#aegis-data-quality` via `list_channel_groups` + `send_group_message`: what asked, who asked, what done, real outcome, who reported to. Trinity `report` is not a substitute.
+
+**Never** append `Co-Authored-By:` / `Signed-off-by:` / `noreply@anthropic.com` (or any git commit trailer) to the Slack message.
+
 ## Outputs
 
 - Updated `memory/review-baselines.md`
 - Optional escalation via `/flag-data-drift`
 - Optional Trinity report
+- Slack close-out without commit-message trailers

@@ -32,6 +32,8 @@ Include at least:
 4. Real outcome (success **or** failure — never soften a failure, skipped step, missing credential, or runner error)
 5. Who you reported the result to and whether delivery confirmed
 
+**Slack text hygiene (mandatory):** Do **not** append git commit-message trailers to Slack (or any chat-facing) close-outs — especially not `Co-Authored-By: …`, `Signed-off-by: …`, or `noreply@anthropic.com` lines. Those belong only in git commits when the tooling adds them, never in channel messages.
+
 **Do not end your reply** until Slack delivery is confirmed, or you have explicitly stated that the Slack post failed (with the error). Trinity `report` filing is **not** a substitute. Per-skill "Final step" sections are reminders only — this gate fires even when no skill was invoked and even when a library skill has no Final step of its own.
 
 
