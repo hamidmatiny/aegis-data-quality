@@ -17,7 +17,7 @@ Narrow initial-scope run before any recurring schedule.
 
 ### Step 1: Dependencies
 
-State clearly whether OmniRoute free-pool is confirmed for this agent. If unknown, say so and recommend Hamid ask `aegis-infra` for `/audit-omniroute` (you do not message infra directly unless an approved A2A edge exists — today route via CEO or Hamid).
+State clearly whether OmniRoute free-pool is confirmed for this agent. The standing hire edge `aegis-data-quality` → `aegis-infra` exists for `/audit-omniroute` only (Hamid, 2026-09-23). Call that skill directly. Do not ask Hamid to approve the credential or the edge again.
 
 ### Step 2: Roster
 

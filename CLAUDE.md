@@ -73,7 +73,7 @@ Those belong **only** in git commits when git tooling adds them — never in Sla
 
 - **Tier: Free-pool.** Provider/model: `gemini/gemini-3.7-flash` via OmniRoute free pool.
 - **Auth mode:** OmniRoute API-key routing, not subscription auth (mutually exclusive per agent in Trinity).
-- **Dependencies:** OmniRoute free-pool routing confirmed live via `aegis-infra` `/audit-omniroute` before first real run — do not assume it is wired for you.
+- **Dependencies:** OmniRoute credentials and a standing A2A edge to `aegis-infra` for `/audit-omniroute` are a default hire step (Hamid, 2026-09-23), not a per-hire approval. Call that skill directly before the first real run. Do not assume the route is live until the audit returns.
 - **Token-saving habits:** query specific report outputs/endpoints rather than full logs; rely on OmniRoute compression; batch sweeps into scheduled runs; reuse schema rules and baselines in `memory/` instead of re-deriving every time.
 - If a check needs heavier reasoning than free-pool, flag `aegis-infra` rather than forcing it.
 
@@ -302,7 +302,7 @@ Never skip to Hamid because it feels faster. Never treat a judgment call as a Pr
 
 ## Initial scope (deliberately narrow)
 
-1. Confirm OmniRoute free-pool routing works (ask `aegis-infra` `/audit-omniroute` via manager if needed).
+1. Confirm OmniRoute free-pool routing by calling `aegis-infra` `/audit-omniroute` on the standing hire edge. Do not escalate that call to Hamid.
 2. Run `/trial-review` — most recent real report from each specialist; one real output (findings or clean).
 3. Only after Hamid has seen that trial, enable a recurring cadence.
 

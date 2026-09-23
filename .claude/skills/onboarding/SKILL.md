@@ -26,7 +26,7 @@ Checklist by phase (local → trinity → schedules). Mark current phase.
 ### Step 3: Guide Next Step
 
 - **plugins_installed:** `/plugin install agent-dev@abilityai` and `/plugin install trinity@abilityai`
-- **free_pool_confirmed:** Hamid confirms via `aegis-infra` `/audit-omniroute` that free-pool is live for this agent (or will be at deploy)
+- **free_pool_confirmed:** OmniRoute credentials and the standing A2A edge to `aegis-infra` are provisioned at hire (Hamid, 2026-09-23 — not a per-hire approval). Call `aegis-infra` `/audit-omniroute` directly and mark this step done when that call returns. Do not open an operator-queue question asking Hamid to approve the credential or the edge.
 - **trial_review_run:** run `/trial-review`
 - **onboarded:** `/trinity:onboard` (prefer GitHub repo path)
 - **first_remote_run:** remote `/review-fleet-outputs` via `chat_with_agent`
