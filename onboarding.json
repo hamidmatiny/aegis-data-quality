@@ -5,7 +5,7 @@
     "local": {
       "plugins_installed": { "done": false, "label": "Install plugins (agent-dev, trinity)" },
       "free_pool_confirmed": { "done": true, "label": "OmniRoute creds + standing A2A aegis-data-quality → aegis-infra granted 2026-09-23 (combos HTTP 200; permission added). Call /audit-omniroute directly; no per-hire Hamid approval." },
-      "trial_review_run": { "done": false, "label": "Run /trial-review and produce a real findings-or-clean report" }
+      "trial_review_run": { "done": true, "label": "Run /trial-review and produce a real findings-or-clean report" }
     },
     "trinity": {
       "onboarded": { "done": false, "label": "Deploy to Trinity (/trinity:onboard)" },
