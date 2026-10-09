@@ -307,3 +307,11 @@ Never skip to Hamid because it feels faster. Never treat a judgment call as a Pr
 3. Only after Hamid has seen that trial, enable a recurring cadence.
 
 <!-- FLEET_SYNC_PROBE_20260916T191108Z -->
+
+## Platform Skills
+
+This agent has the following skills installed in `~/.claude/skills/`:
+
+- `/gemini-critic` - Use with /gemini-critic command — ⚠ missing: GEMINI_API_KEY
+
+Use these skills by invoking their slash commands (e.g., `/gemini-critic`).
